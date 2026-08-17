@@ -1,5 +1,7 @@
 # Query complexity of black-box firewall verification — reproducibility package
 
+Archived release: v1.0, DOI 10.5281/zenodo.21983102 (https://doi.org/10.5281/zenodo.21983102).
+
 Code, data and experiment drivers accompanying the manuscript *"The price of auditing a firewall"*
 (anonymised for review). The package reproduces every number, table and figure of the manuscript.
 
@@ -17,7 +19,7 @@ and Linux / Python 3.12 (WSL2 Ubuntu 24.04).
 | `e9_sensitivity.py` | E9 (Section IX-I): wrong witnesses, noisy IDQ, non-reduced specifications (≈ 1 min) |
 | `e10_overlap.py` | E10 (Section IX-J, Theorem 2a″): overlapping listed rules (≈ 1 min) |
 | `e11_testbed.py` | E11 (Section IX-K): REAL iptables firewall in Linux network namespaces (Linux + root; ≈ 20–25 min) |
-| `results/` | CSV tables and logs produced by the scripts (as used in the manuscript) |
+| `results/` | CSV tables and logs produced by the scripts (as used in the manuscript); `E11_testbed*.log/.csv` hold the real-firewall runs on two independent machines (Linux sandbox; WSL2 Ubuntu 24.04) |
 
 ## Requirements
 Python ≥ 3.10; `pip install -r requirements.txt` (numpy, matplotlib; scapy only for E11).
