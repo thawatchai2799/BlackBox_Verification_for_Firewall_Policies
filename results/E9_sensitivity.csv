@@ -1,0 +1,29 @@
+exp,m,param,probes,error,note
+wrong_witness,79,0.0,1380,0.0,fraction of witnesses replaced by random packets
+wrong_witness,79,0.1,1372,0.0098,fraction of witnesses replaced by random packets
+wrong_witness,79,0.3,1339,0.060333333333333336,fraction of witnesses replaced by random packets
+wrong_witness,79,0.5,1488,0.038,fraction of witnesses replaced by random packets
+wrong_witness,70,0.0,1231,0.0,fraction of witnesses replaced by random packets
+wrong_witness,70,0.1,1197,0.009266666666666666,fraction of witnesses replaced by random packets
+wrong_witness,70,0.3,1246,0.0038666666666666667,fraction of witnesses replaced by random packets
+wrong_witness,70,0.5,1168,0.036533333333333334,fraction of witnesses replaced by random packets
+wrong_witness,261,0.0,3891,0.0,fraction of witnesses replaced by random packets
+wrong_witness,261,0.1,4069,0.0033333333333333335,fraction of witnesses replaced by random packets
+wrong_witness,261,0.3,4045,0.0142,fraction of witnesses replaced by random packets
+wrong_witness,261,0.5,4078,0.0106,fraction of witnesses replaced by random packets
+wrong_witness,227,0.0,3427,0.0,fraction of witnesses replaced by random packets
+wrong_witness,227,0.1,3398,6.666666666666667e-05,fraction of witnesses replaced by random packets
+wrong_witness,227,0.3,3553,0.027666666666666666,fraction of witnesses replaced by random packets
+wrong_witness,227,0.5,3369,0.014866666666666667,fraction of witnesses replaced by random packets
+noisy_idq,86,0.0,1510.0,0.0,prob. each IDQ answer is a random id; error averaged over 3 runs
+noisy_idq,86,0.001,1510.0,0.002111111111111111,prob. each IDQ answer is a random id; error averaged over 3 runs
+noisy_idq,86,0.01,1607.6666666666667,0.09508888888888889,prob. each IDQ answer is a random id; error averaged over 3 runs
+noisy_idq,86,0.05,1909.3333333333333,0.3030888888888889,prob. each IDQ answer is a random id; error averaged over 3 runs
+certificate_non-reduced,32,68,68,0.005,combined move+flip faults; error = missed fraction
+certificate_reduced,19,55,55,0.0,combined move+flip faults; error = missed fraction
+certificate_non-reduced,52,122,122,0.005,combined move+flip faults; error = missed fraction
+certificate_reduced,36,106,106,0.0,combined move+flip faults; error = missed fraction
+certificate_non-reduced,104,257,257,0.0,combined move+flip faults; error = missed fraction
+certificate_reduced,80,234,234,0.0,combined move+flip faults; error = missed fraction
+certificate_non-reduced,93,246,246,0.0,combined move+flip faults; error = missed fraction
+certificate_reduced,77,228,228,0.0,combined move+flip faults; error = missed fraction

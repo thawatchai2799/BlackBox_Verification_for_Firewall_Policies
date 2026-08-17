@@ -1,0 +1,5 @@
+trial 0: box volume 2^24 of 2^104; expected probes ≈ 2^80; found after None (budget 100000000)
+trial 1: box volume 2^24 of 2^104; expected probes ≈ 2^80; found after None (budget 100000000)
+trial 2: box volume 2^24 of 2^104; expected probes ≈ 2^80; found after None (budget 100000000)
+trial 3: box volume 2^24 of 2^104; expected probes ≈ 2^80; found after None (budget 100000000)
+trial 4: box volume 2^24 of 2^104; expected probes ≈ 2^80; found after None (budget 100000000)

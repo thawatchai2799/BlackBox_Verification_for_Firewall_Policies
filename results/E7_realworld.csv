@@ -1,0 +1,17 @@
+ruleset,rules,effective_rules,orders_tried,best_order,leaves,semantics_ok,tree_probes,tree_bound,reconstruct_equiv,certificate,listed_disjoint_bound,probes_per_rule
+TUM_2013_FWD_lower,581,1,8,"dst,dport,src,sport,proto",1,True,2,2,True,1,121429,0.0
+TUM_2014_FWD_lower,517,1,8,"dst,dport,src,sport,proto",1,True,2,2,True,1,108053,0.0
+TUM_2015_FWD_lower,1614,2,8,"dst,dport,src,sport,proto",1,True,2,2,True,1,337326,0.0
+TUM_2015_FWD_upper,3570,1515,8,"proto,dst,dport,src,sport",20128,True,513612,704447,True,,746130,143.9
+docker_topos_FWD_upper,123,123,120,"src,dst,proto,sport,dport",144,True,1979,5007,True,305,25707,16.1
+gopherproxy_INP_lower,264,263,120,"proto,sport,dport,dst,src",10393,True,276215,363722,True,20989,55176,1046.3
+home_user_FWD_lower,75,75,120,"src,dst,proto,sport,dport",1,True,2,2,True,1,15675,0.0
+home_user_FWD_upper,106,106,120,"src,proto,sport,dport,dst",65,True,1137,2242,True,143,22154,10.7
+medium_company_FWD_lower,63,63,120,"src,proto,sport,dport,dst",1123,True,28583,39272,True,2287,13167,453.7
+medium_company_FWD_upper,64,64,120,"src,proto,sport,dport,dst",1441,True,36746,50402,True,2926,13376,574.2
+sargon_INP_lower,27,6,120,"src,dst,proto,sport,dport",3,True,18,72,True,4,5643,0.7
+sqrl_shorewall_FWD_lower,1918,69,8,"dst,dport,src,sport,proto",1,True,2,2,True,1,400862,0.0
+sqrl_shorewall_FWD_upper,166,129,120,"src,dst,proto,sport,dport",1,True,2,2,True,1,34694,0.0
+synology_INP_lower,45,13,120,"src,dst,proto,sport,dport",27,True,364,912,True,55,9405,8.1
+ugent_INP_lower,62,59,120,"proto,dport,sport,src,dst",4865,True,144340,170242,True,10205,12958,2328.1
+ugent_INP_upper,65,60,120,"proto,dport,sport,src,dst",4871,True,144355,170452,True,10217,13585,2220.8

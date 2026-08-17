@@ -1,0 +1,115 @@
+[15:02:24] kernel modules: iprange=yes u32=yes
+[15:02:24] == sargon_INP_lower: 27 rules -> canonical tree 3 leaves (reduced 3), 256 iptables rules
+[15:02:36]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[15:02:37]    (a) Thm 2b on real firewall: probes=14 (bound 72) time=0.6s equivalent=True
+[15:02:37]    (b) Thm 3 certificate |S|=4 on unmodified firewall: 0 false alarms, 0.2s
+[15:02:37]       fault 0: certificate DETECTED
+[15:02:37]       fault 1: certificate DETECTED
+[15:02:37]       fault 2: certificate DETECTED
+[15:02:37]       fault 3: certificate DETECTED
+[15:02:37]       fault 4: certificate DETECTED
+[15:02:38]       fault 5: certificate DETECTED
+[15:02:38]    (b) faults detected 6/6
+[15:02:38]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[15:02:39]    (d) Thm 6 with N=m=3 sampled packets: probes=14 time=0.8s uniform error=0.0037 (bound m/(eN)=0.368)
+[15:02:39] == synology_INP_lower: 45 rules -> canonical tree 35 leaves (reduced 35), 782 iptables rules
+[15:02:51]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[15:03:14]    (a) Thm 2b on real firewall: probes=618 (bound 1192) time=22.9s equivalent=True
+[15:03:16]    (b) Thm 3 certificate |S|=81 on unmodified firewall: 0 false alarms, 2.5s
+[15:03:18]       fault 0: certificate DETECTED
+[15:03:19]       fault 1: certificate DETECTED
+[15:03:22]       fault 2: certificate DETECTED
+[15:03:23]       fault 3: certificate DETECTED
+[15:03:25]       fault 4: certificate DETECTED
+[15:03:27]       fault 5: certificate DETECTED
+[15:03:27]    (b) faults detected 6/6
+[15:03:30]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[15:03:47]    (d) Thm 6 with N=m=35 sampled packets: probes=304 time=17.5s uniform error=0.0000 (bound m/(eN)=0.368)
+[15:03:47] == home_user_FWD_upper: 106 rules -> canonical tree 89 leaves (reduced 89), 1846 iptables rules
+[15:04:01]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[15:05:39]    (a) Thm 2b on real firewall: probes=1664 (bound 3082) time=98.3s equivalent=True
+[15:05:50]    (b) Thm 3 certificate |S|=215 on unmodified firewall: 0 false alarms, 11.2s
+[15:06:01]       fault 0: certificate DETECTED
+[15:06:09]       fault 1: certificate DETECTED
+[15:06:12]       fault 2: certificate DETECTED
+[15:06:16]       fault 3: certificate DETECTED
+[15:06:19]       fault 4: certificate DETECTED
+[15:06:30]       fault 5: certificate DETECTED
+[15:06:30]    (b) faults detected 6/6
+[15:06:34]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[15:07:48]    (d) Thm 6 with N=m=89 sampled packets: probes=1168 time=74.0s uniform error=0.0000 (bound m/(eN)=0.368)
+[15:07:48] == docker_topos_FWD_upper: 123 rules -> canonical tree 192 leaves (reduced 192), 12336 iptables rules
+[15:08:11]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[15:16:05]    (a) Thm 2b on real firewall: probes=3314 (bound 6687) time=473.7s equivalent=True
+[15:17:03]    (b) Thm 3 certificate |S|=405 on unmodified firewall: 0 false alarms, 58.1s
+[15:17:48]       fault 0: certificate DETECTED
+[15:17:49]       fault 1: certificate DETECTED
+[15:18:18]       fault 2: certificate DETECTED
+[15:18:36]       fault 3: certificate DETECTED
+[15:18:40]       fault 4: certificate DETECTED
+[15:19:08]       fault 5: certificate DETECTED
+[15:19:09]    (b) faults detected 6/6
+[15:19:17]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[15:23:52]    (d) Thm 6 with N=m=192 sampled packets: probes=2296 time=274.1s uniform error=0.0000 (bound m/(eN)=0.368)
+[15:23:52] done
+[22:50:32] kernel modules: iprange=yes u32=yes
+[22:50:32] selftest probe (6, 167838211, 167904004, 3, 80): accepted=True leaf=1 expected action=1 leaf=1
+[22:50:32] selftest probe (17, 167838211, 167904004, 3, 53): accepted=False leaf=2 expected action=0 leaf=2
+[22:50:32] selftest probe (1, 167838211, 167904004, 0, 0): accepted=False leaf=0 expected action=0 leaf=0
+[22:50:32] selftest probe (0, 167838211, 167904004, 0, 0): accepted=False leaf=0 expected action=0 leaf=0
+[22:50:32] selftest probe (200, 16909060, 3232235777, 0, 0): accepted=False leaf=2 expected action=0 leaf=2
+[22:50:32] selftest PASSED
+[22:50:41] kernel modules: iprange=yes u32=yes
+[22:50:41] == sargon_INP_lower: 27 rules -> canonical tree 3 leaves (reduced 3), 256 iptables rules
+[22:50:53]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[22:50:54]    (a) Thm 2b on real firewall: probes=14 (bound 72) time=0.7s equivalent=True
+[22:50:54]    (b) Thm 3 certificate |S|=4 on unmodified firewall: 0 false alarms, 0.2s
+[22:50:54]       fault 0: certificate DETECTED
+[22:50:54]       fault 1: certificate DETECTED
+[22:50:54]       fault 2: certificate DETECTED
+[22:50:54]       fault 3: certificate DETECTED
+[22:50:54]       fault 4: certificate DETECTED
+[22:50:54]       fault 5: certificate DETECTED
+[22:50:54]    (b) faults detected 6/6
+[22:50:55]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[22:50:56]    (d) Thm 6 with N=m=3 sampled packets: probes=14 time=0.8s uniform error=0.0037 (bound m/(eN)=0.368)
+[22:50:56] == synology_INP_lower: 45 rules -> canonical tree 35 leaves (reduced 35), 782 iptables rules
+[22:51:08]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[22:51:30]    (a) Thm 2b on real firewall: probes=618 (bound 1192) time=22.8s equivalent=True
+[22:51:33]    (b) Thm 3 certificate |S|=81 on unmodified firewall: 0 false alarms, 2.4s
+[22:51:34]       fault 0: certificate DETECTED
+[22:51:36]       fault 1: certificate DETECTED
+[22:51:38]       fault 2: certificate DETECTED
+[22:51:40]       fault 3: certificate DETECTED
+[22:51:41]       fault 4: certificate DETECTED
+[22:51:43]       fault 5: certificate DETECTED
+[22:51:44]    (b) faults detected 6/6
+[22:51:46]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[22:52:03]    (d) Thm 6 with N=m=35 sampled packets: probes=304 time=17.0s uniform error=0.0000 (bound m/(eN)=0.368)
+[22:52:03] == home_user_FWD_upper: 106 rules -> canonical tree 89 leaves (reduced 89), 1846 iptables rules
+[22:52:16]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[22:53:54]    (a) Thm 2b on real firewall: probes=1664 (bound 3082) time=98.2s equivalent=True
+[22:54:06]    (b) Thm 3 certificate |S|=215 on unmodified firewall: 0 false alarms, 11.9s
+[22:54:17]       fault 0: certificate DETECTED
+[22:54:25]       fault 1: certificate DETECTED
+[22:54:29]       fault 2: certificate DETECTED
+[22:54:32]       fault 3: certificate DETECTED
+[22:54:35]       fault 4: certificate DETECTED
+[22:54:46]       fault 5: certificate DETECTED
+[22:54:46]    (b) faults detected 6/6
+[22:54:50]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[22:56:03]    (d) Thm 6 with N=m=89 sampled packets: probes=1168 time=72.7s uniform error=0.0000 (bound m/(eN)=0.368)
+[22:56:03] == docker_topos_FWD_upper: 123 rules -> canonical tree 192 leaves (reduced 192), 12336 iptables rules
+[22:56:22]    consistency check: 200/200 probes agree with the offline model (sniff == counter target, counter == leaf)
+[23:03:11]    (a) Thm 2b on real firewall: probes=3314 (bound 6687) time=409.3s equivalent=True
+[23:04:19]    (b) Thm 3 certificate |S|=405 on unmodified firewall: 0 false alarms, 68.2s
+[23:05:07]       fault 0: certificate DETECTED
+[23:05:09]       fault 1: certificate DETECTED
+[23:05:37]       fault 2: certificate DETECTED
+[23:05:57]       fault 3: certificate DETECTED
+[23:06:01]       fault 4: certificate DETECTED
+[23:06:30]       fault 5: certificate DETECTED
+[23:06:31]    (b) faults detected 6/6
+[23:06:40]    (c) Lemma 1: shadowed rule inserted; over 60 certificate probes it matched 0 times, transcript differences 0
+[23:11:23]    (d) Thm 6 with N=m=192 sampled packets: probes=2296 time=282.8s uniform error=0.0000 (bound m/(eN)=0.368)
+[23:11:23] done
