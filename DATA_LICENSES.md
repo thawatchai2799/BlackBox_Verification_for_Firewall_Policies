@@ -14,7 +14,7 @@ normal form* produced by the verified toolchain of Diekmann et al.:
 
 * Toolchain and normal-form dumps — <https://github.com/diekmann/Iptables_Semantics>
   (Cornelius Diekmann; **BSD 2-Clause**; the file redistributed here as
-  `LICENSE_Diekmann_BSD2` is the licence text of that repository)
+  `THIRD_PARTY_LICENSE_Diekmann_BSD2.txt` is the licence text of that repository)
 * Raw `iptables-save` / `iptables -L -n -v` dumps the normal forms are derived
   from — <https://github.com/diekmann/net-network>
   (Chair for Network Architectures and Services, TUM, and contributors)
@@ -57,6 +57,6 @@ Diekmann et al.
 
 ## Full licence texts
 
-* BSD 2-Clause (Diekmann, toolchain and normal forms): `LICENSE_Diekmann_BSD2`
+* BSD 2-Clause (Diekmann, toolchain and normal forms): `THIRD_PARTY_LICENSE_Diekmann_BSD2.txt`
 * CC BY-NC-SA 3.0: <https://creativecommons.org/licenses/by-nc-sa/3.0/>
 * CC BY-NC-SA 4.0: <https://creativecommons.org/licenses/by-nc-sa/4.0/>
