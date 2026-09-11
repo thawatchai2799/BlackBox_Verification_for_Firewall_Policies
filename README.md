@@ -60,6 +60,6 @@ Code: MIT (see `LICENSE`).
 
 **The embedded real-world rule sets are third-party data and are NOT covered by the MIT licence.**
 The normal-form dumps come from https://github.com/diekmann/Iptables_Semantics (Cornelius Diekmann,
-BSD 2-Clause — text in `LICENSE_Diekmann_BSD2`); the raw dumps they derive from are published in
+BSD 2-Clause — text in `THIRD_PARTY_LICENSE_Diekmann_BSD2.txt`); the raw dumps they derive from are published in
 https://github.com/diekmann/net-network under CC BY-NC-SA 3.0/4.0. Per-file provenance and licences
 are listed in `DATA_LICENSES.md`, which anyone reusing this repository must read first.
