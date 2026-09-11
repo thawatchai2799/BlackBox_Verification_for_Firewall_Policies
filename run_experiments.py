@@ -40,7 +40,7 @@ def E2():
             t2 = learn_tr_idq(orc, wit, widths)
             eq = t.equivalent(t2, samples=2000, rng=rng)
             mm, beta = t.num_leaves(), t.num_breakpoints()
-            ub = (mm - 1) * (max(widths) + 1) + 2 * mm         # (m-1)(log W+1) + 2m
+            ub = (mm - 1) * (max(widths) + len(widths)) + 2 * mm   # Theorem 2b: (m-1)(log W + d) + 2m
             lb = (mm - 1) * math.log2(max(1, (1 << min(widths)) / mm)) / math.log2(mm + 1) if mm > 1 else 0
             rows.append(dict(m=mm, beta=beta, queries=orc.total, upper=ub, lower_info=lb, equiv=eq))
             log(f"   m={mm:5d} beta={beta:5d} q={orc.total:7d}  ub={ub:7d} equiv={eq}")
@@ -49,7 +49,7 @@ def E2():
     plt.figure(figsize=(6, 4))
     plt.scatter([r["m"] for r in rows], [r["queries"] for r in rows], s=12, label="observed queries")
     xs = sorted(set(r["m"] for r in rows))
-    plt.plot(xs, [(x - 1) * (max(widths) + 1) + 2 * x for x in xs], "r--", label="upper bound (m-1)(log W+1)+2m")
+    plt.plot(xs, [(x - 1) * (max(widths) + len(widths)) + 2 * x for x in xs], "r--", label="upper bound (m-1)(log W+d)+2m")
     plt.plot(xs, [max(0, (x - 1) * math.log2(max(1, (1 << min(widths)) / x)) / math.log2(x + 1)) for x in xs], "g:", label="info-theoretic lower bound")
     plt.xscale("log"); plt.yscale("log"); plt.xlabel("leaves m"); plt.ylabel("probes")
     plt.title("E2: Tree-Rule reconstruction with IDQ + witnesses"); plt.legend(fontsize=7); plt.tight_layout()

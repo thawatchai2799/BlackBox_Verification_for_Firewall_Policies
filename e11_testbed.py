@@ -271,8 +271,8 @@ def run_policy(name, fwmac, maxleaves, rng, rows):
     t2 = learn_tr_idq(fw, wit, t.widths)
     secs = time.time() - t0
     eq = t.equivalent(t2, samples=20000, rng=rng)
-    log(f"   (a) Thm 2b on real firewall: probes={fw.total} (bound {(m-1)*32+3*m-1}) time={secs:.1f}s equivalent={eq}")
-    rows.append(dict(policy=name, experiment="thm2b_reconstruction", value=int(eq), probes=fw.total, seconds=round(secs, 1), note=f"m={m}, bound={(m-1)*32+3*m-1}"))
+    log(f"   (a) Thm 2b on real firewall: probes={fw.total} (bound {(m-1)*(32+5)+2*m}) time={secs:.1f}s equivalent={eq}")
+    rows.append(dict(policy=name, experiment="thm2b_reconstruction", value=int(eq), probes=fw.total, seconds=round(secs, 1), note=f"m={m}, bound={(m-1)*(32+5)+2*m}"))
     # ---- (b) Theorem 3: certificate of the reduced spec against the real firewall; then inject faults
     S = audit_certificate(tr)
     fw.mq_count = fw.idq_count = 0; t0 = time.time()
