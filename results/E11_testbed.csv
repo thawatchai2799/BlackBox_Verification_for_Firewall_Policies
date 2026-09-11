@@ -1,24 +1,24 @@
 policy,experiment,value,probes,seconds,note
 sargon_INP_lower,consistency,200,200,,of 200 random probes
-sargon_INP_lower,thm2b_reconstruction,1,14,0.6,"m=3, bound=72"
+sargon_INP_lower,thm2b_reconstruction,1,14,0.6,"m=3, bound=80"
 sargon_INP_lower,certificate_baseline,0,4,0.2,"|S|=4, expected 0 alarms"
 sargon_INP_lower,certificate_faults,6,24,,detected 6/6 injected structural faults
 sargon_INP_lower,lemma1_shadowed_rule,0,60,,transcript diffs 0 (expected 0)
 sargon_INP_lower,thm6_partial,0.0037,14,0.8,"N=m=3, bound 0.368"
 synology_INP_lower,consistency,200,200,,of 200 random probes
-synology_INP_lower,thm2b_reconstruction,1,618,22.9,"m=35, bound=1192"
+synology_INP_lower,thm2b_reconstruction,1,618,22.9,"m=35, bound=1328"
 synology_INP_lower,certificate_baseline,0,81,2.5,"|S|=81, expected 0 alarms"
 synology_INP_lower,certificate_faults,6,486,,detected 6/6 injected structural faults
 synology_INP_lower,lemma1_shadowed_rule,0,60,,transcript diffs 0 (expected 0)
 synology_INP_lower,thm6_partial,0.0,304,17.5,"N=m=35, bound 0.368"
 home_user_FWD_upper,consistency,200,200,,of 200 random probes
-home_user_FWD_upper,thm2b_reconstruction,1,1664,98.3,"m=89, bound=3082"
+home_user_FWD_upper,thm2b_reconstruction,1,1664,98.3,"m=89, bound=3434"
 home_user_FWD_upper,certificate_baseline,0,215,11.2,"|S|=215, expected 0 alarms"
 home_user_FWD_upper,certificate_faults,6,1290,,detected 6/6 injected structural faults
 home_user_FWD_upper,lemma1_shadowed_rule,0,60,,transcript diffs 0 (expected 0)
 home_user_FWD_upper,thm6_partial,0.0,1168,74.0,"N=m=89, bound 0.368"
 docker_topos_FWD_upper,consistency,200,200,,of 200 random probes
-docker_topos_FWD_upper,thm2b_reconstruction,1,3314,473.7,"m=192, bound=6687"
+docker_topos_FWD_upper,thm2b_reconstruction,1,3314,473.7,"m=192, bound=7451"
 docker_topos_FWD_upper,certificate_baseline,0,405,58.1,"|S|=405, expected 0 alarms"
 docker_topos_FWD_upper,certificate_faults,6,2430,,detected 6/6 injected structural faults
 docker_topos_FWD_upper,lemma1_shadowed_rule,0,60,,transcript diffs 0 (expected 0)
