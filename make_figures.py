@@ -108,7 +108,8 @@ for mm in sorted(set(int(r["m"]) for r in E8)):
 xs = [0.25, 0.5, 1, 2, 4, 16]
 ax.plot(xs, [1 / (math.e * x) for x in xs], "r--", lw=1.2, label="bound m/(eN)")
 ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("traffic sample size N / leaves m"); ax.set_ylabel("uniform-measure error of reconstruction")
-ax.set_title("Partial witnesses from sampled traffic (Thm 6)"); ax.legend(fontsize=7); fig.tight_layout()
+ax.set_ylim(top=4e1)                      # head-room so that the legend does not cover the bound line
+ax.set_title("Partial witnesses from sampled traffic (Thm 6)"); ax.legend(fontsize=7, loc="upper right", ncol=2); fig.tight_layout()
 save(fig, "fig_E8"); plt.close(fig)
 
 # ---------- summary printed for the paper

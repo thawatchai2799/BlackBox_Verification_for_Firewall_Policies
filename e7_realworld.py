@@ -225,7 +225,7 @@ def main():
         cert = len(audit_certificate(t)) if m <= 20000 else None
         listed_bound = 2 * n * sum(WIDTHS) + n
         rows.append(dict(ruleset=name, rules=n, effective_rules=n_eff, orders_tried=n_orders, best_order=oname, leaves=m, semantics_ok=ok, tree_probes=q_tree,
-                         tree_bound=(m - 1) * 32 + 3 * m - 1, reconstruct_equiv=eq, certificate=cert,
+                         tree_bound=(m - 1) * (32 + len(WIDTHS)) + 2 * m, reconstruct_equiv=eq, certificate=cert,
                          listed_disjoint_bound=listed_bound, probes_per_rule=(None if q_tree is None else round(q_tree / n, 1))))
         log(f"{name:28s} n={n:5d} n_eff={n_eff:5d} m={m:7d} order={oname:32s} sem={ok} q_tree={q_tree} cert={cert} eq={eq}")
     with open(os.path.join(OUT, "E7_realworld.csv"), "w", newline="", encoding="utf-8") as f:
