@@ -1,6 +1,6 @@
 # Query complexity of black-box firewall verification — reproducibility package
 
-Archived on Zenodo: concept DOI 10.5281/zenodo.21983101 (all versions; https://doi.org/10.5281/zenodo.21983101). This is release v1.3.
+Archived on Zenodo: concept DOI 10.5281/zenodo.21983101 (all versions; https://doi.org/10.5281/zenodo.21983101). This is release v1.4.
 
 Code, data and experiment drivers accompanying the manuscript *"The price of auditing a firewall"*
 (anonymised for review). The package reproduces every number, table and figure of the manuscript.
@@ -58,6 +58,13 @@ differences for the shadowed rule. Reference outputs are in `results/`.
 E1 → Thm 2a/2b (Figure 2) · E2 → Thm 2b (Figure 1) · E3 → Thm 4 (Fig. 5) · E4 → Thm 3 (Fig. 4) · E5, E5b → Thm 1 and Section 9.6 · E6 → dimension
 dependence (Fig. 3) · E7 → Table 3, Fig. 6 · E7b → shadowed/redundant/essential counts in Section 9.7 · E8 → Thm 6 (Fig. 7) · E9 → sensitivity · E10 → Thm 2a″ · E11 → Table 4 ·
 all experiments → Table 5. Section and table numbers follow the revised manuscript (Sections 9.1–9.11 are the experiment subsections).
+
+## Changes in v1.4
+Figures only; no script other than `make_figures.py` changed and no measurement or CSV changed.
+`make_figures.py` now typesets the axis labels and legend entries of all seven figures (`fig_E1`–`fig_E4`,
+`fig_E6`–`fig_E8`) in mathematical notation (matplotlib mathtext, e.g. $2n\cdot\Sigma_j\lceil\log W_j\rceil+n$ instead
+of `2n*sum(ceil(log W_j))+n`), matching the re-typeset manuscript; the PNG files in `results/` were regenerated at
+600 dpi from the unchanged CSV files.
 
 ## Changes in v1.3
 Two supplementary experiments were added for the revised manuscript; no existing measurement changed.

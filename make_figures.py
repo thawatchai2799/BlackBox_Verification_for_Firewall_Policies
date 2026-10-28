@@ -28,9 +28,9 @@ m = [int(r["m"]) for r in E2]; q = [int(r["queries"]) for r in E2]
 xs = sorted(set(m))
 fig, ax = plt.subplots(figsize=(5.2, 3.6))
 ax.scatter(m, q, s=12, label="observed probes (100 trees)")
-ax.plot(xs, [(x - 1) * (32 + 5) + 2 * x for x in xs], "r--", lw=1.2, label="upper bound (m−1)(log W + d) + 2m")
-ax.plot(xs, [max(1, (x - 1) * math.log2(WMAX / x) / math.log2(x + 1)) for x in xs], "g:", lw=1.2, label="lower bound (m−1)·log(W/m)/log(m+1)")
-ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("number of leaves m"); ax.set_ylabel("probes")
+ax.plot(xs, [(x - 1) * (32 + 5) + 2 * x for x in xs], "r--", lw=1.2, label=r"upper bound $(m-1)(\log W + d) + 2m$")
+ax.plot(xs, [max(1, (x - 1) * math.log2(WMAX / x) / math.log2(x + 1)) for x in xs], "g:", lw=1.2, label=r"lower bound $(m-1)\cdot\log(W/m)/\log(m+1)$")
+ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel(r"number of leaves $m$"); ax.set_ylabel("probes")
 ax.set_title("Tree-Rule reconstruction, IDQ + witnesses (Thm 2b)"); ax.legend(fontsize=7); fig.tight_layout()
 save(fig, "fig_E2"); plt.close(fig)
 
@@ -41,8 +41,8 @@ fig, ax = plt.subplots(figsize=(5.2, 3.6))
 ax.scatter(n, [int(r["q_listed"]) for r in E1], s=12, label="listed-rule (disjoint), IDQ")
 ax.scatter(n, [int(r["q_tree"]) for r in E1], s=12, marker="^", label="Tree-Rule, same semantics, IDQ")
 xs = sorted(set(n))
-ax.plot(xs, [2 * x * SUMW + x for x in xs], "r--", lw=1.2, label="listed bound 2n·Σ log W_j + n = 209n")
-ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("rules n = leaves m"); ax.set_ylabel("probes")
+ax.plot(xs, [2 * x * SUMW + x for x in xs], "r--", lw=1.2, label=r"listed bound $2n\cdot\Sigma_j \lceil \log W_j \rceil + n = 209n$")
+ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel(r"rules $n$ = leaves $m$"); ax.set_ylabel("probes")
 ax.set_title("Same policy, listed vs tree representation (Thm 2a/2b)"); ax.legend(fontsize=7); fig.tight_layout()
 save(fig, "fig_E1"); plt.close(fig)
 
@@ -54,10 +54,10 @@ for d in ds:
     rs = [r for r in E6 if int(r["d"]) == d]
     ax.scatter([d] * len(rs), [int(r["q_listed"]) / int(r["n"]) for r in rs], c="C0", s=14)
     ax.scatter([d] * len(rs), [int(r["q_tree"]) / int(r["n"]) for r in rs], c="C1", marker="^", s=14)
-ax.plot(ds, [16 * d + 1 for d in ds], "C0--", lw=1, label="listed bound per rule: 2d·8 + 1")
-ax.plot(ds, [st.mean(((int(r["n"]) - 1) * (8 + d) + 2 * int(r["n"])) / int(r["n"]) for r in E6 if int(r["d"]) == d) for d in ds], "C1--", lw=1, label="tree bound per leaf: (m−1)(log W + d)/m + 2")
+ax.plot(ds, [16 * d + 1 for d in ds], "C0--", lw=1, label=r"listed bound per rule: $2d\cdot 8 + 1$")
+ax.plot(ds, [st.mean(((int(r["n"]) - 1) * (8 + d) + 2 * int(r["n"])) / int(r["n"]) for r in E6 if int(r["d"]) == d) for d in ds], "C1--", lw=1, label=r"tree bound per leaf: $(m-1)(\log W + d)/m + 2$")
 ax.scatter([], [], c="C0", label="listed: probes per rule"); ax.scatter([], [], c="C1", marker="^", label="tree: probes per leaf")
-ax.set_xlabel("number of header fields d (8-bit fields, m ≈ 15–65)"); ax.set_ylabel("probes per rule / per leaf")
+ax.set_xlabel(r"number of header fields $d$ (8-bit fields, $m \approx$ 15–65)"); ax.set_ylabel("probes per rule / per leaf")
 ax.set_title("Dimension dependence (Thm 2a vs 2b)"); ax.legend(fontsize=7); fig.tight_layout()
 save(fig, "fig_E6"); plt.close(fig)
 ratio_by_d = {d: st.mean(float(r["ratio"]) for r in E6 if int(r["d"]) == d) for d in ds}
@@ -66,10 +66,10 @@ ratio_by_d = {d: st.mean(float(r["ratio"]) for r in E6 if int(r["d"]) == d) for 
 E4 = load("E4_certificate.csv")
 mm = [int(r["m"]) for r in E4]
 fig, ax = plt.subplots(figsize=(5.2, 3.6))
-ax.plot(mm, [int(r["cert_size"]) for r in E4], "o-", label="certificate size |S|")
-ax.plot(mm, [3 * x - 2 for x in mm], "r--", lw=1.2, label="upper bound 3m − 2")
-ax.plot(mm, [int(r["lower_bound"]) for r in E4], "g:", lw=1.2, label="lower bound max(m, 2(m−1)/d)")
-ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("number of leaves m"); ax.set_ylabel("packets")
+ax.plot(mm, [int(r["cert_size"]) for r in E4], "o-", label=r"certificate size $|S|$")
+ax.plot(mm, [3 * x - 2 for x in mm], "r--", lw=1.2, label=r"upper bound $3m-2$")
+ax.plot(mm, [int(r["lower_bound"]) for r in E4], "g:", lw=1.2, label=r"lower bound $\max(m,\, 2(m-1)/d)$")
+ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel(r"number of leaves $m$"); ax.set_ylabel("packets")
 ax.set_title("Audit certificate size (Thm 3)"); ax.legend(fontsize=7); fig.tight_layout()
 save(fig, "fig_E4"); plt.close(fig)
 
@@ -78,9 +78,9 @@ E3 = load("E3_mq_vs_idq.csv")
 fig, ax = plt.subplots(figsize=(5.2, 3.6))
 for i, d in enumerate(sorted(set(int(r["d"]) for r in E3))):
     rs = [r for r in E3 if int(r["d"]) == d]
-    ax.scatter([int(r["m"]) for r in rs], [int(r["q_mq"]) for r in rs], s=14, c=f"C{i}", label=f"MQ-only, d = {d}")
-ax.scatter([int(r["m"]) for r in E3], [int(r["q_idq"]) for r in E3], s=10, marker="x", c="k", label="IDQ (all d)")
-ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("number of leaves m"); ax.set_ylabel("probes")
+    ax.scatter([int(r["m"]) for r in rs], [int(r["q_mq"]) for r in rs], s=14, c=f"C{i}", label=rf"MQ-only, $d = {d}$")
+ax.scatter([int(r["m"]) for r in E3], [int(r["q_idq"]) for r in E3], s=10, marker="x", c="k", label=r"IDQ (all $d$)")
+ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel(r"number of leaves $m$"); ax.set_ylabel("probes")
 ax.set_title("Action-only observer vs identity oracle (Thm 4)"); ax.legend(fontsize=7); fig.tight_layout()
 save(fig, "fig_E3"); plt.close(fig)
 
@@ -93,8 +93,8 @@ ax.scatter([int(r["rules"]) for r in rs], [int(r["tree_probes"]) for r in rs], s
 rc = [r for r in rs if r["certificate"] not in ("", "None")]
 ax.scatter([int(r["rules"]) for r in rc], [int(r["certificate"]) for r in rc], s=18, marker="^", label="audit certificate size (Thm 3)")
 xs = sorted(set(int(r["rules"]) for r in rs))
-ax.plot(xs, [2 * x * SUMW + x for x in xs], "r--", lw=1, label="listed-rule bound 209 n (disjoint case)")
-ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("rules n in the real ruleset"); ax.set_ylabel("packets")
+ax.plot(xs, [2 * x * SUMW + x for x in xs], "r--", lw=1, label=r"listed-rule bound $209n$ (disjoint case)")
+ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel(r"rules $n$ in the real ruleset"); ax.set_ylabel("packets")
 ax.set_title("Real-world iptables rulesets (E7)"); ax.legend(fontsize=6.5); fig.tight_layout()
 save(fig, "fig_E7"); plt.close(fig)
 
@@ -104,10 +104,10 @@ E8 = load("E8_partial.csv")
 fig, ax = plt.subplots(figsize=(5.2, 3.6))
 for mm in sorted(set(int(r["m"]) for r in E8)):
     rs = [r for r in E8 if int(r["m"]) == mm]
-    ax.scatter([int(r["N"]) / mm for r in rs], [max(float(r["error"]), 1e-5) for r in rs], s=14, label=f"measured error, m = {mm}")
+    ax.scatter([int(r["N"]) / mm for r in rs], [max(float(r["error"]), 1e-5) for r in rs], s=14, label=rf"measured error, $m = {mm}$")
 xs = [0.25, 0.5, 1, 2, 4, 16]
-ax.plot(xs, [1 / (math.e * x) for x in xs], "r--", lw=1.2, label="bound m/(eN)")
-ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel("traffic sample size N / leaves m"); ax.set_ylabel("uniform-measure error of reconstruction")
+ax.plot(xs, [1 / (math.e * x) for x in xs], "r--", lw=1.2, label=r"bound $m/(eN)$")
+ax.set_xscale("log"); ax.set_yscale("log"); ax.set_xlabel(r"traffic sample size $N$ / leaves $m$"); ax.set_ylabel("uniform-measure error of reconstruction")
 ax.set_ylim(top=4e1)                      # head-room so that the legend does not cover the bound line
 ax.set_title("Partial witnesses from sampled traffic (Thm 6)"); ax.legend(fontsize=7, loc="upper right", ncol=2); fig.tight_layout()
 save(fig, "fig_E8"); plt.close(fig)
