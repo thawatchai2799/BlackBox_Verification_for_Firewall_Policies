@@ -1,0 +1,6 @@
+trial,box_log2_volume,header_log2,A_no_side_info_expected_log2,B_prior_space_log2,B_expected_probes,B_probes_to_first_hit,C_witness_probes,C_bound_2sum_plus_1,C_exact
+0,24,104,80,48,16777216,1448070,194,209,True
+1,24,104,80,48,16777216,7350110,196,209,True
+2,24,104,80,48,16777216,20939402,191,209,True
+3,24,104,80,48,16777216,5262270,195,209,True
+4,24,104,80,48,16777216,8672186,192,209,True
